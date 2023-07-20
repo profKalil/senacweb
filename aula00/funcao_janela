@@ -1,0 +1,15 @@
+<script>
+        function gerador() {
+            let nome = document.querySelector('input[name="nome"]').value;
+            let cursos = document.querySelector('textarea[name="cursos"]').value;
+            let experiencia = document.querySelector('textarea[name="experiencia"]').value;
+
+            const infoWindow = window.open('', '_blank', 'width=400,height=300');
+            infoWindow.document.write('<h1>Informações do Candidato</h1>');
+            infoWindow.document.write('<p><strong>Nome:</strong> ' + nome + '</p>');
+            infoWindow.document.write('<p><strong>Cursos de tecnologia:</strong></p>');
+            infoWindow.document.write('<p>' + cursos + '</p>');
+            infoWindow.document.write('<p><strong>Experiência profissional:</strong></p>');
+            infoWindow.document.write('<p>' + experiencia + '</p>');
+        }
+    </script>
