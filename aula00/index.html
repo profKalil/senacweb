@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">   
+    <title>Oportunidade de Emprego</title>
+</head>
+<body bgcolor="#CCC">
+
+    <!-- UM POUCO DE ESTILIZAÇÃO DO FORMULÁRIO E RODAPÉ -->
+
+    <style>
+        #emprego {
+            background-color: cadetblue;
+            width: 70%;
+            margin-left: 1%;
+            font-family: 'Courier New', Courier, monospace;        
+        }
+        .black {
+            background-color: #000;
+            color: chartreuse;
+            font-family: Arial, Helvetica, sans-serif;            
+            margin: 0px;            
+            padding: 5px;
+        }
+        .rodape {
+            height: 90px;
+        }
+    </style>
+   
+    <!-- 
+        DADOS DA VAGA 
+    -->
+
+    <div class="black">
+        <p><strong>ATENÇÃO: Vaga de Emprego para Ararnguá!</strong></p>
+    </div>
+    <h1>Cargo: Programador Web</h1>
+    <p>A Kalil Inc Consultoria tem uma grande oportunidade para você! Dispomos de uma vaga para <U><em>Desenvolvedor Web</em></U>, 40 horas semanais, para trabalhar em Araranguá.</p>
+    <p>A empresa oferece oportunidade de crescimento na rede, salário compatível com a função, vale alimentação e plano de saúde, odontológico e funerário.</p>
+    <h2>REQUISITOS:</h2>
+    <p>
+        <ul>
+            <li>Curso de Desenvolvimento Web no SENAC;</li>
+            <li>Veículo próprio;</li>
+            <li>Experiência de no mínimo <u>6 meses</u> na função com registro em carteira;</li>
+            <li>Disponibilidade de horário para os finais de semana;</li>
+            <li>Antecedentes criminais: "nada consta";</li>
+            <li>Comprovantes de vacinação em dia, inclusive exame médico para Covid-19.</li>
+            <li>Preenchimento correto do formulário de candidatura da vaga (disponível abaixo)</li>
+        </ul>
+        Para concorrer, basta enviar o formulário abaixo <mark>impreterivelmente</mark> até segunda-feira, dia 24, às 22 horas. <br>        
+    </p>
+
+    <!-- INÍCIO DO FORMULÁRIO -->
+
+    <hr>
+    <form action="" id="emprego">
+        <fieldset>
+            <legend><u>Dados requeridos para a vaga</u></legend>
+            
+            <!-- DADOS PESSOAIS, TELEFONE E ENDEREÇO -->
+
+            <p><u>Dados Pessoais</u></p>
+            <label for="nome">Seu nome é:</label>
+            <input name="nome" type="text" placeholder="Digite seu nome completo, sem abreviações"> <br>
+            <label for="idade">Qual a sua idade?</label>
+            <input name="idade" type="date"> <br>
+            
+            <p><u>Formas de contato</u></p>
+            <label for="email">Seu email:</label>
+            <input name="email" type="email" placeholder="Digite seu e-mail"> <br>
+            <label for="telefone">Telefone:</label>
+            <input name="telefone" type="tel" placeholder="Seu telefone com DDD"> <br>
+            <label for="celular">Celular:</label>
+            <input name="celular" type="tel" placeholder="Seu celular com DDD"> <br>
+
+            <p><u>Endereço</u></p>
+            <label for="rua">Rua:</label>
+            <input name="rua" type="text" placeholder="Nome da rua, avenida etc"> <br>
+            <label for="numero">Número:</label>
+            <input name="numero" type="number" placeholder="Número"> <br>
+            <label for="complemento">Complemento:</label> 
+            <input name="complemento" type="text" placeholder="Complemento"> <br>
+            <label for="bairro">Seu bairro é:</label>
+            <input name="bairro" type="text" placeholder="Bairro"> <br>
+            <label for="cidade">Sua cidade é:</label>
+            <input name="cidade" type="text" placeholder="Cidade">
+            
+            <!-- FILIAÇÃO -->
+            
+            <p><u>Filiação</u></p>
+            <label for="pai">O nome do seu pai é:</label>
+            <input name="pai" type="text" placeholder="Nome completo do seu pai"> <br>
+            <label for="mae">O nome de sua mãe é:</label>
+            <input name="mae" type="text" placeholder="Nome completo de sua mãe"> <br>
+            <label for="tutor">Nome de seu tutor legal:</label>
+            <input name="tutor" placeholder="Nome completo de seu tutor"> <br>
+            <p><u>Comprovação de experiência</u></p>
+            <label for="empresa">Principal experiência na função:</label>
+            <input name="empresa" type="text" placeholder="Nome da empresa"> <br>
+            <label for="tempo-inicial">Início do registro em:</label>
+            <input name="tempo-inicial" type="date"> <br>
+            <label for="tempo-final">Data final do registro em:</label>
+            <input name="tempo-final" type="date"> <br>
+            <label for="tempo-total">Total de tempo de serviço:</label>
+            <input name="tempo-total" type="number"> <br><br>
+
+            <!-- ENVIAR -->
+
+            <label for="aceite">Aceito os <a href="http://www.google.com">Termos</a></label>
+            <input type="checkbox" name="aceite" value="OK">  <br><br>
+            <input type="submit" name="enviar" value="Enviar">
+        </fieldset>       
+    </form>
+    
+    <br>
+    
+    <div class="black" class="rodape">
+        <p>&copy; 2021 - Site desenvolvido por Kalil de Oliveira para a disciplina Desenvolvimento Web</p>
+        <p><em>Atenção: a vaga anunciada é fictícia e qualquer semelhança com a realidade é apenas coincidência.</em></p>
+    </div>
+    <hr>
+</body>
+</html>
