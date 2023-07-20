@@ -1,0 +1,13 @@
+<script>
+        function gerador() {
+            let nome = document.querySelector('input[name="nome"]').value;
+            let cursos = document.querySelector('textarea[name="cursos"]').value;
+            let experiencia = document.querySelector('textarea[name="experiencia"]').value;
+
+            let conteudoArquivo = `Informações do Candidato\n\nNome: ${nome}\n\nCursos de tecnologia:\n${cursos}\n\nExperiência profissional:\n${experiencia}`;
+            const baixar = document.createElement('a');
+            baixar.href = 'data:text/plain;charset=utf-8,' + encodeURIComponent(conteudoArquivo);
+            baixar.download = 'informacoes_candidato.txt';
+	    baixar.click();
+        }
+    </script>
