@@ -1,0 +1,16 @@
+<!-- BIBLIOTECA -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js"></script>
+
+
+<script>
+        function gerador() {
+            let nome = document.querySelector('input[name="nome"]').value;
+            let cursos = document.querySelector('textarea[name="cursos"]').value;
+            let experiencia = document.querySelector('textarea[name="experiencia"]').value;
+
+            const baixar = new jsPDF();
+            baixar.setFontSize(14);
+            baixar.text(20, 10, `Informações do Candidato\n\nNome: ${nome}\n\nCursos de tecnologia:\n${cursos}\n\nExperiência profissional:\n${experiencia}`);
+            baixar.save('informacoes_candidato.pdf');
+        }
+</script>
