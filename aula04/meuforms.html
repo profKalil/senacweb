@@ -1,13 +1,75 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-  <title>True or False</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
 </head>
+
 <body>
-  <forms>
-    <fieldset>
-      
-    </fieldset>
-  </forms>
+    <!------------------------------------ Formulario ----------------------------------------------->
+    <form action="http://www.google.com">
+        <div>
+            <h1> Cadastro de Desenvolvedores </h1>
+            <p> Registre suas informações </p>
+        </div>
+
+        <fieldset>
+            <legend> Nome </legend>
+            <label for="pnome">Primeiro nome </label><br>
+            <input type="text" id="pnome" name="pnome"><br>
+            <label for="unome">Ultimo nome </label><br>
+            <input type="text" id="unome" name="unome"><br>
+        </fieldset>
+
+        <fieldset>
+            <legend> Raça </legend>
+            <p>Escolha sua raça: </p>
+            <input type="radio" name="raca" id="humana" value="humana">
+            <label for="">Humana</label>
+            <input type="radio" name="raca" id="robo" value="robo">
+            <label for="">Robô</label>
+            <input type="radio" name="raca" id="alienigena" value="alienigena">
+            <label for="">Alienígena</label>
+            <input type="radio" name="raca" id="outro" value="outro">
+            <label for="">Outro</label>
+        </fieldset>
+
+        <fieldset>
+            <legend> Linguagens </legend>
+            <p>Linguagens a trabalhar: </p>
+            <input type="checkbox" id="ling1" name="ling1" value="html">
+            <label for=""> Html </label>
+            <input type="checkbox" id="ling2" name="ling2" value="css">
+            <label for=""> CSS </label>
+            <input type="checkbox" id="ling3" name="ling3" value="javascript">
+            <label for=""> Javascript </label>
+        </fieldset>
+
+        <fieldset>
+            <legend> Informações Complementares </legend>
+            <label for="email">E-mail</label>
+            <input type="email" name="email" id="email"><br>
+            <label for="escolaridade"> Escolaridade </label>
+            <select name="" id="escolaridade">
+                <option selected disabled value="">Selecione</option>
+                <option value=""> Ensino Fundamental </option>
+                <option value=""> Ensino Médio </option>
+                <option value=""> Ensino Técnico </option>
+                <option value=""> Ensino Fundamental </option>
+            </select><br>
+            <label for="endereco"> Endereço </label>
+            <textarea name="endereco" id="endereco" cols="" rows=""></textarea> <br>
+            <label for="dnascimento"> Data de Nascimento </label>
+            <input type="date" name="dnascimento" id="dnascimento">
+            <label for="ntelefone"> Número de Telefone </label>
+            <input type="number" name="ntelefone" id="ntelefone">
+        </fieldset>
+
+        <br><input type="submit" value="Enviar">
+
+    </form>
 </body>
+
 </html>
