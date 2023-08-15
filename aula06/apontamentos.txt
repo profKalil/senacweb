@@ -1,0 +1,50 @@
+CSS: definição
+> linguagem de estilização e layout
+> mais opções que html
+> html = estrutura; css=formatação
+
+CSS: como trabalha?
+> Seletor {Propriedade: Valor;}
+> Vincular folha de estilo "style.css"
+> Tag <link> tipo text/css
+> Caminho href=""
+> Um CSS pode atender vários html
+> Um html pode ter vários CSS
+
+CSS: Cores e fundos
+> color: código ou nome da cor;
+> fundo: background-color: cor;
+> img-fundo: background-image: url();
+> background-repeat: repeat-x
+> background-repeat: repeat-y
+> background-repeat: repeat
+> background-attachment: fixed
+> background-attachment: scroll
+> background-position: 50% 25%
+> background-position: top right
+> background-position: 2cm 2cm
+
+CSS: fontes
+> tipo - font-family: nome da fonte
+> font-style: normal, italic, oblique
+> font-variant: small-caps
+> peso - font-weight: bold;
+> tamanho - font-size: 30px ou pt;
+> font-size: % ou em;
+> font: italic bold 30px arial;
+
+CSS: textos
+> text-indent: 30px
+> text-align: right;
+> text-align: center;
+> text-align: justify;
+> text-decoration: underline;
+> letter-spacing: 6px;
+> text-transform: uppercase;
+> text-transform: capitalize;
+
+CSS: Links
+> a:visited {color: red;}
+> a:link { color: #6699CC;}
+> a:hover {color: orange;}
+> a {text-decoration:none;}
