@@ -62,3 +62,4 @@ CSS: sobre camada com z-index
 
 CSS: Validador
 > http://jigsaw.w3.org/css-validator/
+> https://www.freeformatter.com/html-validator.html
