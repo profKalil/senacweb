@@ -1,0 +1,14 @@
+CSS: identificar e agrupar
+> class, id
+> <h1 class="titulo">Titulo</h1>
+> .titulo{;}
+> <h1 id="titulo1">Titulo</h1>
+> #titulo1{;}
+
+CSS: elementos (span e div)
+> span.nomeclasse
+> ou usando classe(.) e id(#)
+
+CSS: box model
+> margin, border, padding, content
+> top, right, bottom, left
