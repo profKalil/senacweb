@@ -6,6 +6,7 @@ CSS: bordas
 double, groove, ridge, inset, outset
 > border-top-style: none ou hidden;
 > border: 1px solid blue;
+> border-radius: 30px;
 
 CSS: altura e largura
 > div.box {width: 200px;}
