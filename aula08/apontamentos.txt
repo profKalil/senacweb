@@ -4,7 +4,7 @@ CSS: bordas
 > border-color: red;
 > border-style: dotted, dashed, solid,
 double, groove, ridge, inset, outset
-> border-top-style: none;
+> border-top-style: none ou hidden;
 > border: 1px solid blue;
 
 CSS: altura e largura
