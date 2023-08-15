@@ -1,0 +1,63 @@
+CSS: bordas
+> border-width: thin, medium ou thick
+> border-width: 20px;
+> border-color: red;
+> border-style: dotted, dashed, solid,
+double, groove, ridge, inset, outset
+> border-top-style: none;
+> border: 1px solid blue;
+
+CSS: altura e largura
+> div.box {width: 200px;}
+> div.box {height: 500px;}
+
+CSS: Flutuando elementos
+> div.box {float:left; width: 33%;}
+> clear:both;
+
+CSS: Posicionando elementos
+> .img {  
+	  position:absolute;
+	  top: 100px;
+	  left: 200px;
+       }
+> .img {  
+	  position:relative;
+	  top: 100px;
+	  left: 200px;
+       }
+
+CSS: sobre camada com z-index
+> #dez_ouro{
+	position: absolute;
+	left: 100px;
+	top: 100px;
+	z-index: 1;
+	}
+#valete_ouro{
+	position: absolute;
+	left: 115px;
+	top: 115px;
+	z-index: 2;
+	}
+#rainha_ouro {
+	position: absolute;
+	left: 130px;
+	top: 130px;
+	z-index: 3;
+	}
+#rei_ouro {
+	position: absolute;
+	left: 145px;
+	top: 145px;
+	z-index: 4;
+	}
+#az_ouro {
+	position: absolute;
+	left: 160px;
+	top: 160px;
+	z-index: 5;
+	}
+
+CSS: Validador
+> http://jigsaw.w3.org/css-validator/
