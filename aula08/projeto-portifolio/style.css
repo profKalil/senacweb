@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    height: 100vh;
+    background: url("img/foto.jpg") no-repeat right;
+    background-color: black;
+    background-size: 40%;
+    color:white;
+}
+h1{
+    letter-spacing: 2px;
+    margin: 10px 10px 10px 0;
+    padding: 2px 2px 2px 2px;
+    font-size: 27px;
+    border-right: 2px solid white;
+}
+p{
+    margin: 5px 5px 5px 0;
+}
+span {
+    color: salmon;
+}
+a {
+    text-decoration-line: none;
+    color: white;
+}
+.destaque {
+    font-weight: bolder;
+}
+.rosto{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.texto-inicial {
+    margin: 10%;
+}
