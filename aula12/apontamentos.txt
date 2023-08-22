@@ -1,0 +1,4 @@
+Array ("variedade", em português)
+> var var1, var2, var3, var4;
+> var1 = "feijão"; var2 = "arroz"; var3 = "banana"; var4 = "tomate";
+> compras = new Array ("feijão", "arroz", "banana", "tomate");
