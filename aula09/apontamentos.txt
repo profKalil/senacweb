@@ -1,0 +1,112 @@
+> Definição. História.
+> Diferença entre JS e Java
+> Uso
+
+Exercício
+>Como aconteceu a evolução JS no decorrer dos anos?
+Nasceu para dar "movimento" ao html e evoluiu nos navegadores desde o Netscape 2.0
+> Qual a diferença Java / JS?
+Java é compilado e totalmente OOP. 
+Javascript é interpretado e rodado diretamente no navegador. 
+> Quais as formas de se trabalhar? 
+Pode-se inserir diretamente no html ou em arquivo externo. 
+Exemplo: <script>alert('Olá';)</script>
+> Como funciona o processamento JS? 
+O navegador lê de cima para baixo e executa na sequência.
+
+Importância do JS em um projeto web.
+> Amplia a possibilidade de interação do usuário com as páginas web.
+
+Quais frameworks existem atualmente no mercado?
+> React (Facebook), Bootstrap (Twitter) e Angular (Google) são alguns exemplos.
+
+> Variável - Tipo (inteiro, real, caracter, literais/texto, lógico)
+> Restrições para nome de variáveis
+_pagecount
+99Balloons - inválido!
+Number_Items
+Alpha&Beta - inválido!
+Part9
+
+> Tipadas vs dinâmicas
+> Em JS usa-se 'var', 'let' e 'const'
+> Escopo de variável
+
+Exercício
+> Qual a principal finalidade de uma variável?
+Guardar e manipular dados/valores
+> O que significa tipagem dinâmica?
+A variável assume um tipo a cada atribuição
+> Nomenclaturas válidas
+a__b; a_1_; _inicio; nome; palavra; VALOR_MAIOR; all; ___;
+> Nomenclaturas inválidas
+@nome; a_|_; #valor; tele#; 123; _=; 
+> Crie dez variáveis atribuindo valores diferentes
+var nome = "Kalil"; document.write(nome);
+> Quais tipos de variáveis usamos em JS? 
+inteiro, real, booleana, caracter e texto/string.
+> Diferenciação do tipo em variável dinâmica
+Pelo conteúdo: inteiro (1), real(1.0), booleana(true ou false), caracter('1') e string ('123')
+> Qual a importância das constantes? 
+Permite criar variáveis que não mudam ou não recebem novas atribuições. Por exemplo const pi = 3.14;
+> Em que momento converter uma variável? 
+Já que a variável é um espaço na memória, convertemos para aproveitar código/espaço.
+
+Operadores/atribuição/concatenação
+> adição, subtração, multiplicação, divisão, módulo e negação
+> atribuir = 
+> concatenar + 
+> economizar linhas += -= *= /= %=
+> incremento ++a ou a++
+> decremento --a ou a--
+> comparação inteiro == real
+> idêntico inteiro === inteiro2
+> outros: diferente != menor < maior > menor igual <= maior igual >=
+> ternário expressao ? código  : código; (nota>=7)?passou=true : passou=false;
+> lógicos: e &&, ou ||, ou exclusivo ^ não !
+
+Tabela verdade
+> conjunção : noivo, noiva = casamento se VV
+> disjunção: RG, título = vota se VF ou FV ou VV
+> exclusiva: noite, dia = verdade se VF ou FV
+
+Precedência
+> mesma regra da matemática
+> usar parênteses
+> mesma prioridade? Da esquerda p/ direita!
+
+Exercício
+> Qual a finalidade dos operadores de strings? 
+Operadores são a alma da programação, pois permitem manipular dados de diferentes maneiras, dar fluxo a um programa.
+> Quais os operadores de decremento e incremento? Cite exemplos.
+Pode-se incrementar um e decrementar um. Ex.: var num=1; num++; num--; A saída será 1; 
+> Qual a finalidade do operador aritmético módulo? 
+Para saber se um número é par, por exemplo, basta dividir por 2 e a "sobra" zerar.
+> Cite os operadores relacionais e mostre alguns exemplos. 
+São ==, ===, !=, <, >, <= e >=. Por exemplo: Nota maior ou igual a 7, aluno aprovado.
+> Quais são os operadores lógicos ou booleanos? 
+Retornam valor true ou false. Exemplo: Para ser número primo, precisa ser divisível por 1 e por ele mesmo. Usamos && neste exemplo. (num%condicao1 && num%condicao2)? primo=true : primo=false;
+> Quais os operadores de atribuição? 
+Usa-se = para atribuição. Pode-se combinar com os operadores matemáticos * / - + %.
+> Qual a sintaxe do uso de ternário? Cite um exemplo.
+Condição ? código se verdadeiro : código se falso; (nota>=7 ? aprovado=true : aprovado=false);
+> Qual o resultado de A = 8*5-3+4/2+19%5/2+1;
+A = (8*5)-3+(4/2)+((19%5)/2)+1
+Depois, da esquerda pra direita! Resultado = 42.
+A = 8*5-3+4/2+19%5/2+1
+A = 40-3+2+4/2+1
+A = 40-3+2+2+1
+A = 37+2+2+1
+A = 39+2+1
+A = 42
+> Faça testes com os operadores relacionais, substituindo > do código:
+<script>
+  var1 = 2.2564;
+  var2 = 2.2635;
+  document.write(val1 > var2 ? "sim" : "não");
+</script>
+> Use o operador de concatenação para montar a frase abaixo: 
+<script>
+  a = "de"; b = "é um"; c = "comunicação"; d = "internet"; e = "meio";
+  document.write("a "+d+" "+b" "+e+" "+a+" "+c);
+</script>
