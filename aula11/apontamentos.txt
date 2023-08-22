@@ -1,0 +1,47 @@
+Objetos
+> Uma "variável" composta de atributos e métodos.
+> Acesso com o ponto(.)
+> Tamanho de uma String: objeto.length
+> Converte em maiúsculo: objeto.toUpperCase();
+> length, prototype, constructor
+> charAt(), charCodeAt(), concat(), fromCharCode(),
+indexOf(), lastIndexOf(), math(), replace(), search(),
+slice(), split(), substr(), substring(), toLowerCase(),
+toUpperCase(), valueOf()
+
+Number
+>max_value, min_value, negative_infinitive, positive_infinitive,
+NaN, prototype, constructor
+>toExponential(), toFixed(), toPrecision(), toString(), valueOf()
+
+Representação
+> Hexadecimal: var valor1 = 0x142;
+> Octal: var valor2 = 0377;
+> Notação: var valor3 = 2e1; // 20
+var valor4 = 2e-1 // 0.2
+
+Math
+> Constantes E, LN2 etc. 
+> Math.sqrt(); Math.pow(); 
+> Math.round(); Math.floor(); Math.ceil(); Math.abs();
+> Math.sin(); Math.cos(); Math.tan(). Math.asin().. etc.
+> Math.max(var1, var2); Math.mix(var1, var2);
+> Math.random(); Math.round();
+
+Date
+> data = new Date(ano, mes, dia, hora, minutos, segundos);
+> métodos get e set
+
+Exercícios
+> Leia a data de hoje e monte uma página com o calendário, destacando o dia de hoje (em vermelho, por exemplo).
+
+> Escreva um programa que receba uma data através de um campo de textos (promt()) no formato dd/mm/aa. O programa deve reclamar (alert()) se o formato digitado for incorreto e dar uma nova chance ao usuário. Recebido o string, ele deve ser interpretado pelo programa que deverá imprimir na página quantos dias, meses e anos faltam para a data digitada.
+>> DICA 1
+let data_modelo;
+const data_String = prompt('Digite uma data no formato aaa/mm/dd:');
+data_modelo = new Date(data_String) ? console.log("É data") : console.log("Não é data");
+>> DICA 2
+var diferenca = data_atual - data_nasc; // guarda o valor em milisegundos
+>> DICA 3
+considerando ano de 12 meses, mês de 30 dias, dia de 24 horas, hora de 60 min, minuto de 60 seg e segundo de 1000 milisegundos:
+var converte_anos = diferenca / (1000*60*60*24*30*12);
