@@ -1,0 +1,92 @@
+Caixas de diálgo
+> alert - saída - alert("Olá "+nome);
+> prompt - entrada - nome = prompt("Apresente-se: ");
+> confirm - usa Ok ou Cancelar - decisao = confirm("Você concorda?");
+
+Exercícios
+> Usando a instrução alert, faça um algoritmo que exibe "Bom dia usuário".
+> Faça um algoritmo que solicite nome e depois exiba: "Bom dia nome_usuario"
+> Faça um algoritmo que solicite ano de nascimento, ano atual e calcule a idade para exibir num alert().
+> Faça um algoritmo que receba dois números inteiros via prompt() e exiba o resultado da soma, subtração, multiplicação e divisão via alert();
+> Faça um algoritmo que peça sua amada em casamento ou namoro via confirm(). Se aceitar, retorne "Eu aceito", senão "Desculpa, não posso". 
+> Faça um algoritmo de validação de login. O usuário irá digitar login e senha. Para "root" e "123" retorna "Acesso permitido" senão "Login/Senha inválidos".
+> Escreva um algoritmo que calcula quantos meses um funcionário trabalhou para uma empresa. Solciite o dia, mês, ano que foi contratado e depois o dia, mês e ano que foi demitido. Calcule quantos meses trabalhou. 
+> Escreva um algoritmo que receba uma idade e retorne "Adulto" para maior ou igual a 18 ou "Sou uma criança/adolescente" caso contrário.
+> Escreva um algoritmo que solicite ao usuário uma lista de compras para se fazer no supermercado. Essa lista deve ter 10 produtos e após serem digitados exiba a lista em um só alert() utilizando a formatação: 
+1 - arroz 
+2 - feijão 
+3 - macarrão 
+4 - farofa
+> Escreva um algoritmo que receba 3 valores inteiros que representam o tamanho dos lados de um triângulo. Retorna "equilátero" para os três lados iguais ou "isósteles" se dois lados forem iguais ou "escaleno" se todos os lados diferentes.
+
+Bloco de controle
+> if
+> if e else
+
+Exercícios
+> 1. Faça um script em JS que possua 4 notas, calcule a soma e imprima a média aritmética e a mensagem "aprovado" se a média maior ou igual a 7, ou reprovado para menor que 7.
+> 2. Faça um script em JS que receba a idade de um nadador e imprima Infantil para idade entre 5 e 7 anos, Infantil B para 8 a 10, Juvenil A para 11 a 13 e Juvenil B para 14 a 17.
+
+Ternário
+> booleano ? código se true : código se false;
+
+Exercício
+> 1. Faça um script em JS que receba um número representado por uma variável. Verifique se este número é par ou ímpar e imprima mensagem.
+> 2. Crie outro script baseando em um seguro de vida com as regras de risco/idade: "baixo" para 18 a 24, "médio" para 25 a 40 e "alto" para 41 a 70.
+
+Switch
+> substitui o if encadeado
+> switch(numero) 
+  {
+    case "1" : alert("Opção 1"); break;
+    case "2" : alert("Opção 2"); break;
+    default : alert("Opção inválida");
+  }
+
+Exercício
+> Faça um script em JS usando switch, onde receba uma variável e mostre as seguintes opções: 
+  1 - módulo.
+  2 - somar.
+  3 - subtrair.
+  4 - multiplicar.
+
+While
+> parecido com o if, mas requer condição de parada para não ser infinito.
+
+Exercício
+> 1. Faça um script que conte de 1 até 100.
+> 2. Faça um script que imprima números de 3 em 3 de 0 a 90.
+
+Do... While
+> condição testada no final.
+
+Exercício
+> 1. Faça um script que conte de -1 a -100 usando do while
+> 2. Faça um script que imprima na tela somente números pares de 2 até 20 com do while.
+
+For
+> for (inicilização; condiçã; incremento) {escopo;}
+
+Exercício
+> Faça um scrip que receba duas variáveis "a" e "b", logo após imprima os números de intervalos entre eles com o uso de for. Ex: a=1, b=3, imprime: 2.
+
+Foreach
+> para array
+> var texto = new Array("1", "2"); for (var indice in texto) {alert(texto[indice]};
+
+Break e Continue
+> Break sai do loop
+> Continue interrompe/"pula" o fluxo para o próximo loop
+
+Exercício
+> Qual a principal finalidade de uma estrutura de controle? 
+> Qual a principal finalidade de uma estrutura de repetição?
+> Crie um código com uma condição ternária onde receba um valor booleano e de acordo com o valor passado na expressão deve imprimir "sim" ou "não".
+> Com o comando IF e ELSE crie um código que determine se uma expressão é verdadeira ou falsa.
+> Qual a finalidade da estrutura de controle SWITCH. Cite um exemplo onde comparamos uma opção com 4 casos diferentes.
+> Crie um contador de 1 até 20 usando a estrutura de repetição WHILE.
+> Crie um contador de 1 até 100 usando DO WHILE e FOR
+> Qual a finalidade do FOREACH? 
+> Crie um código onde podemos parar a execução de um loop infinito com BREAK.
+> Como podemos determinar o uso do CONTINUE e qual a aplicação prática em JS?
+> Crie um código com as seguites características: um FOR com var inicial e final e um IF e ELSE para comparar números como pares ou impares. Exemplo: inicio=0, final=3. Saída 0, 1, 2, 3. Pares: 0, 2. ínpares: 1, 3.
