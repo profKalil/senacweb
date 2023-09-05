@@ -1,0 +1,95 @@
+CRUD
+-- C = Create = INSERT
+-- R = Read = SELECT (WHERE)
+-- U = Update = sempre usar WHERE
+-- D = Delete = sempre usar WHERE
+
+-- criar e apagar DB
+CREATE DATABASE teste;
+DROP DATABASE teste;
+
+-- criar e apagar Tabela
+CREATE TABLE pessoas(
+	id INT PRIMARY KEY AUTO_INCREMENT NOT NULL
+	nome VARCHAR(100) NOT NULL,
+	salario INT NOT NULL
+	data_nascimento DATE NOT NULL,
+);
+
+CREATE TABLE enderecos (
+	id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+	rua VARCHAR(255),
+	numero VARCHAR(10),
+	pessoa_id INT NOT NULL,
+	FOREIGN KEY (pessoa_id) REFERENCES pessoas(id)
+);
+
+DROP TABLE nome_da_tabela;
+
+-- alterar tabela
+ALTER TABLE pessoas ADD COLUNN profissao VARCHAR(255);
+
+-- exibir todos os dados ou um dados mais específico com WHERE
+SELECT * FROM pessoas
+
+SELECT * FROM pessoas
+WHERE nome = "Maria";
+
+SELECT * FROM pessoas
+WHERE salario > 5000;
+
+-- atualização de registros
+UPDATE pessoas SET salario = 3000 WHERE nome = "Maria";
+
+-- deletar 
+DELETE FROM pessoas WHERE profissao = "Estagiario";
+
+-- inserir dados
+INSERT INTO pessoas(nome, salario, data_nascimento, profissao)
+VALUES ("Maria", 5500, "1996-12-01", "Engenheira");
+
+-- constraints INNER JOIN (junta as tabelas)
+
+SELECT pessoas.nome, enderecos.*
+FROM pessoas
+JOIN enderecos ON pessoas.id = enderecos.pessoa_id;
+
+-- constraints LEFT JOIN (pela tabela da esquerda)
+
+SELECT pessoas.nome, enderecos.*
+FROM pessoas
+LEFT JOIN enderecos ON pessoas.id = enderecos.pessoa_id;
+
+-- constraints RIGHT JOIN (pela tabela da direita)
+
+SELECT pessoas.nome, enderecos.*
+FROM pessoas
+RIGHT JOIN enderecos ON pessoas.id = enderecos.pessoa_id;
+
+-- agregacao functions
+
+SELECT SUM(salario) FROM pessoas;
+
+-- usar AS para dar um nome da consulta
+
+SELECT SUM(salario) AS soma_dos_salarios FROM pessoas
+
+-- usar COUNT(*) para contar, GROUP BY para agrupar e CONCAT para concatenar
+
+SELECT COUNT(*) AS qtd_pessoas FROM pessoas;
+
+SELECT COUNT(*) AS qtd_programadores FROM pessoas
+WHERE profissao = "Programador";
+
+SELECT profissao, COUNT(*) AS qtd_profissao FROM pessoas
+GROUP BY profissao;
+
+SELECT CONCAT("O nome é", nome, "ganha R$", salario) AS descricao
+FROM pessoas;
+
+-- selecionar data com YEAR, MONTH e DAY
+
+SELECT YEAR(data_nascimento) AS ano_de_nascimento, 
+MONTH(data_nascimento) AS mes_de_nascimento,
+DAY(data_nascimento) AS dia_de_nascimento
+FROM pessoas;
