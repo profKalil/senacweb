@@ -1,0 +1,30 @@
+Qual a diferença entre banco de dados e SGBD?
+
+O que é SQL e qual a sua funcionalidade?
+
+Complete as lacunas de forma que a sentença esteja correta: 
+
+No estudo de banco de dados, as colunas de uma tabela também são chamadas de---------, as linhas de--------- e a tabela de --------.
+A sigla SGBD significa----------- e-------, ---------, --------, ------- são exemplos de SGBD.
+
+Utilizando o Writer ou Calc ou Inkscape crie uma entidade que represente:
+ - aluno
+ - escola
+ - usuario
+ - funcionario
+
+Quais as vantagens de utilização de um SGBD em relação aos sistemas tradicionais de gerenciamento de arquivos?
+
+O que é um DBA?
+
+Dê um exemplo de aplicação de banco de dados.
+
+O que é DML, como são classificadas, e qual a diferença entre as classificações?
+
+-----------
+
+O que é MYSQL?
+
+Pesquise sobre a licença usada pela SGBD Mysql Server e descreva qual o nome da licença, quando é preciso comprar uma licença, quanto custa e como adquirir.
+
+Quais as vantagens do MySQL diante dos SGBD listados na apostila?
