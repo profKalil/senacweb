@@ -1,0 +1,19 @@
+Remanejamento (código, código_funcionário, código_categoria_funcional, código_lotação, data_admissão, código_cidade, data_preenchimento, questão1, questão2, questão3, questão4, questão5, questão6, questão7, resultado, justificativa, data_resultado);
+
+Categoria Funcional (código, descrição);
+Lotação (código, descrição); Cidade (código, descrição);
+Funcionário (código, nome, sexo, data_nascimento);
+Remanejamento/escolaridade (código_remanejamento, código_escolaridade, grau);
+Escolaridade (código, descrição);
+Remanejamento/Cursos (código_remanejamento, código_cursos);
+Cursos (código, descrição);
+Remanejamento/experiências profissionais (código_remanejamento, código_experiências);
+Experiências Profissionais (código, descrição);
+Remanejamento/atribuições desenvolvidas (código_remanejamento, código_atribuições);
+Atribuições (código, descrição);
+Remanejamento/setores que trabalhou (código_remanejamento, código_setor, data_entrada, data_saída, motivo_saída);
+Setores (código, descrição);
+Remanejamento/atribuições que gostaria (código_remanejamento, código_atribuições, horário);
+Remanejamento/setores-divisões-diretorias que gostaria (código_remanejamento, código_setor);
+Remanejamento/motivos descontentamento (código_remanejamento, código_motivos, observações);
+Motivo descontentamento (código, descrição).
