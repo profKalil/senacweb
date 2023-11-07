@@ -1,0 +1,84 @@
+MODELO
+
+<?php
+
+class CamadaModel {
+    private $num1;
+    private $num2;
+
+    public function __construct() {
+        $this->num1 = 0;
+        $this->num2 = 0;
+    }
+
+    public function getNum1() {
+        return $this->num1;
+    }
+
+    public function setNum1($num1) {
+        $this->num1 = $num1;
+    }
+
+    public function getNum2() {
+        return $this->num2;
+    }
+
+    public function setNum2($num2) {
+        $this->num2 = $num2;
+    }
+
+    public function soma() {
+        return $this->num1 + $this->num2;
+    }
+}
+?>
+
+
+VISAO
+
+<?php
+
+   class CamadaVisao {
+    public function show($mensagem) {
+        echo "<script>alert('$mensagem');</script>";
+    }
+}
+?>
+
+CONTROLLER
+
+
+<?php
+
+include_once 'CamadaVisao.php';
+include_once 'CamadaModel.php';
+
+class CamadaController {
+    private $visao;
+    private $modelo;
+
+    public function __construct($visao, $modelo) {
+        $this->visao = $visao;
+        $this->modelo = $modelo;
+
+        include 'formulario.php';
+    }
+
+    private function processarFormulario() {
+	if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
+           $this->modelo->setNum1($_POST["numero1"]);  
+	   $this->modelo->setNum2($_POST["numero2"]);
+
+           $this->visao->show($this->modelo->soma());
+
+	} else {
+	   $this->visao->show("Erro");
+        }
+    }
+}
+?>
+
+
+
+
