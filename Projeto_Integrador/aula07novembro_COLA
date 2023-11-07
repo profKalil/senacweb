@@ -1,95 +1,11 @@
-// CamadaModel
-
 <?php
 
-class CamadaModel {
-    private $num1;
-    private $num2;
+include_once 'camadaVisao.php';
+include_once 'camadaModel.php';
+include_once 'camadaController.php';
 
-    public function __construct($num1, $num2) {
-        $this->num1 = $num1;
-        $this->num2 = $num2;
-    }
+$visao = new CamadaVisao();
+$modelo = new CamadaModel();
+$controller = new CamadaController($visao, $modelo);
 
-    public function getNum1 () {
-        return $this->num1;
-    }
-
-    public function setNum1 ($num1) {
-        $this->num1 = $num1;
-    }
-
-    public function getNum2 () {
-        return $this->num2;
-    }
-
-    public function setNum2 ($num2) {
-        $this->num2 = $num2;
-    }
-
-
-    public function soma() {
-        return $this->num1 + $this->num2;
-    }
-
-}
 ?>
-
-
-// Camada Visão
-
-
-<?php
-
-class CamadaVisao {
-    public function exibirFormulario() {
-        echo "
-            <form method='post' action='Controller.php'>
-                <label for='numero1'>Número 1:</label>
-                <input type='text' name='numero1' required><br>
-                
-                <label for='numero2'>Número 2:</label>
-                <input type='text' name='numero2' required><br>
-                
-                <input type='submit' value='Enviar'>
-            </form>
-        ";
-    }
-
-    public function show($mensagem) {
-        echo "<script>alert('$mensagem');</script>";
-    }
-}
-?>
-
-
-
-// Camada Controller
-
-<?php
-class CamadaController {
-    private $visao;
-    private $modelo;
-
-    public function __construct($visao, $modelo) {
-        $this->visao = $visao;
-        $this->modelo = $modelo;
-
-        $this->processarFormulario();
-    }
-
-    private function processarFormulario() {
-	if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-
-           $this->modelo->setNum1($_POST["numero1"]);  
-	   $this->modelo->setNum2($_POST["numero2"]);
-
-           $this->visao->show($this->modelo->soma());
-
-	} else {
-	   $this->visao->show("Erro");
-        }
-    }
-}
-?>
-
