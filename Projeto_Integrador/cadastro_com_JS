@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca</title>
+</head>
+<body>
+
+    <h2>Cadastro de Livros</h2>
+    
+    <form id="livroForm">
+        <label for="titulo">Título do Livro:</label>
+        <input type="text" id="titulo" required>
+
+        <label for="autor">Autor:</label>
+        <input type="text" id="autor" required>
+
+        <button type="button" onclick="cadastrarLivro()">Cadastrar Livro</button>
+    </form>
+
+    <h2>Lista de Livros</h2>
+    <ul id="listaLivros"></ul>
+    
+    <h2>Empréstimo de Livros</h2>
+    <form id="emprestimoForm">
+        <button type="button" onclick="realizarEmprestimo()">Emprestar Livros Selecionados</button>
+    </form>
+
+    <script>
+        class Livro {
+            constructor(titulo, autor) {
+                this.titulo = titulo;
+                this.autor = autor;
+                this.emprestado = false;
+                this.dataEmprestimo = null;
+                this.dataDevolucao = null;
+            }
+        }
+
+        class Biblioteca {
+            constructor() {
+                this.livros = [];
+            }
+
+            cadastrarLivro(livro) {
+                this.livros.push(livro);
+            }
+
+            emprestarLivro(titulo) {
+                const livro = this.livros.find(l => l.titulo === titulo);
+
+                if (livro && !livro.emprestado) {
+                    livro.emprestado = true;
+                    livro.dataEmprestimo = new Date();
+                    livro.dataDevolucao = null;
+                    return `Livro "${titulo}" emprestado com sucesso.`;
+                } else if (livro && livro.emprestado) {
+                    return `O livro "${titulo}" já está emprestado.`;
+                } else {
+                    return `Livro "${titulo}" não encontrado.`;
+                }
+            }
+
+            devolverLivro(titulo) {
+                const livro = this.livros.find(l => l.titulo === titulo);
+
+                if (livro && livro.emprestado) {
+                    livro.emprestado = false;
+                    livro.dataDevolucao = new Date();
+                    return `Livro "${titulo}" devolvido com sucesso.`;
+                } else if (livro && !livro.emprestado) {
+                    return `O livro "${titulo}" não está emprestado.`;
+                } else {
+                    return `Livro "${titulo}" não encontrado.`;
+                }
+            }
+
+            listarLivros() {
+                return this.livros.map(l => `
+                    <li>
+                        <input type="checkbox" id="${l.titulo}" value="${l.titulo}">
+                        <label for="${l.titulo}">Título: ${l.titulo}, Autor: ${l.autor}, Emprestado: ${l.emprestado}</label>
+                    </li>
+                `).join('');
+            }
+        }
+
+        const minhaBiblioteca = new Biblioteca();
+
+        function cadastrarLivro() {
+            const titulo = document.getElementById('titulo').value;
+            const autor = document.getElementById('autor').value;
+
+            const novoLivro = new Livro(titulo, autor);
+            minhaBiblioteca.cadastrarLivro(novoLivro);
+
+            atualizarListaLivros();
+        }
+
+        function realizarEmprestimo() {
+            const checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
+            
+            checkboxes.forEach(checkbox => {
+                const titulo = checkbox.value;
+                const mensagem = minhaBiblioteca.emprestarLivro(titulo);
+                alert(mensagem);
+            });
+
+            atualizarListaLivros();
+        }
+
+        function atualizarListaLivros() {
+            const listaLivrosElement = document.getElementById('listaLivros');
+            const livros = minhaBiblioteca.listarLivros();
+
+            listaLivrosElement.innerHTML = livros;
+        }
+    </script>
+
+</body>
+</html>
