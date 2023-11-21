@@ -1,0 +1,14 @@
+function cadastrarLivro() {
+        const titulo = document.getElementById('titulo').value;
+        const autor = document.getElementById('autor').value;
+
+        const params = new URLSearchParams();
+        params.append('titulo', titulo);
+        params.append('autor', autor);
+
+        // Enviar dados para o servidor usando fetch
+        fetch('envia.php', {
+            method: 'POST',
+            body: params,
+        })
+}
